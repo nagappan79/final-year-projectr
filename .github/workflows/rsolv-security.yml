@@ -1,0 +1,24 @@
+name: RSOLV Security Automation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  rsolv-scan:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run RSOLV Security Scan
+        uses: RSOLV-dev/rsolv-action@v3
+        with:
+          rsolvApiKey: ${{ secrets.RSOLV_API_KEY }}
+          mode: 'mitigate'
