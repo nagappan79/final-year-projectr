@@ -1,0 +1,9 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "Vulnerable test app",
+  "main": "index.js",
+  "dependencies": {
+    "express": "4.16.0"
+  }
+}
