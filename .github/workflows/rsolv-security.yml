@@ -21,4 +21,5 @@ jobs:
         uses: RSOLV-dev/rsolv-action@v3
         with:
           rsolvApiKey: ${{ secrets.RSOLV_API_KEY }}
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
           mode: 'mitigate'
